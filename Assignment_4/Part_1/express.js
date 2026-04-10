@@ -51,7 +51,7 @@ app.patch("/user/:id",(req,res)=>{
 
     const userIndex = users.findIndex(user => user.id === userId)
 
-    if(userId === -1){
+    if(userIndex === -1){
         return res.status(404).json({message: "User ID not found."})
     }
 
